@@ -1,7 +1,6 @@
 import React from 'react'
 import { AiFillCar } from "react-icons/ai";
-import { BsFillBookmarkPlusFill, BsFillBookmarkStarFill } from "react-icons/bs";
-import { MdAddCircle, MdRemoveCircle } from "react-icons/md";
+import { MdAddCircle, MdRemoveCircle, MdStars, MdSwapVerticalCircle } from "react-icons/md";
 
 export const navbaritems = [
     {
@@ -13,13 +12,13 @@ export const navbaritems = [
     {
         title: 'Book',
         link: '/cars',
-        library: <BsFillBookmarkPlusFill/>
+        library: <MdStars/>
     },
 
     {
         title: 'My Bookings',
         link: '/cars',
-        library: <BsFillBookmarkStarFill/>
+        library: <MdSwapVerticalCircle/>
     },
 
     {

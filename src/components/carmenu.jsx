@@ -28,7 +28,7 @@ const Carmenu = () => {
 };
   return (
     <>
-    <Carousel responsive={responsive}>
+    <Carousel className='duration-300' responsive={responsive}>
   <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>

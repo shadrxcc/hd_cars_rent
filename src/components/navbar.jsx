@@ -8,7 +8,7 @@ const Navbar = ()=> {
   const [open, setOpen] = useState(false)
   return (
 
-      <div className={`${open ? "w-64" : "w-12"} h-screen duration-300 pt-8 bg-[#232323] relative`}>
+      <div className={`${open ? "w-64" : "w-12"} h-screen duration-300 fixed top-0 pt-8 bg-[#232323] relative`}>
 <AiFillLeftCircle className={`text-4xl w-7 text-white cursor-pointer right-3 absolute top-9 ${!open && "rotate-180"}`} onClick={() => setOpen(!open) }/>
 
 <ul className='pt-16 px-2 flex flex-col justify-center'>
@@ -16,7 +16,7 @@ const Navbar = ()=> {
             return (
                 <li className='text-sm flex items-center hover:-translate-y-1 duration-300 py-2 gap-x-2' key={key} onClick={() => {window.location.pathname = value.link}}>
                     <span>
-                      <span className='text-2xl text-white '>{value.library}
+                      <span className='text-3xl text-white '>{value.library}
                     </span>
                    </span>
                     
