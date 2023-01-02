@@ -1,0 +1,13 @@
+<div className="nav">
+      <ul>
+        {navbaritems.map((value, key) => {
+            return (
+                <li key={key} onClick={() => {window.location.pathname = value.link}}>
+                    <div>{value.title}</div>
+                </li>
+        )
+        })}
+      </ul>
+    </div>
+
+    Illustration by <a href="https://icons8.com/illustrations/author/CkHJmwURlxnt">Olha Khomich</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
