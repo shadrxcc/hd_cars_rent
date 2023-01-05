@@ -32,7 +32,7 @@ const Carmenu = () => {
   <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={car} className='w-full' alt="car" />
+            <img src={car} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -59,7 +59,7 @@ const Carmenu = () => {
   <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={audi} className='w-full' alt="car" />
+            <img src={audi} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -86,7 +86,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={ford} className='w-full' alt="car" />
+            <img src={ford} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -113,7 +113,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={mclaren} className='w-full' alt="car" />
+            <img src={mclaren} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -140,7 +140,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={car} className='w-full' alt="car" />
+            <img src={car} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -167,7 +167,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={car} className='w-full' alt="car" />
+            <img src={car} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -193,7 +193,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={car} className='w-full' alt="car" />
+            <img src={car} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>
@@ -219,7 +219,7 @@ const Carmenu = () => {
 <div className='container relative'>
     <div className='card relative'>
         <div className='card-img'>
-            <img src={car} className='w-full' alt="car" />
+            <img src={car} className='w-full img' alt="car" />
         </div>
         <div className='body'>
             <h2>Enzo Ferrari</h2>

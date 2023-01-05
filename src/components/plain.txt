@@ -10,4 +10,82 @@
       </ul>
     </div>
 
-    Illustration by <a href="https://icons8.com/illustrations/author/CkHJmwURlxnt">Olha Khomich</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
+<div className="spec-card ">
+        <div className="circle-wrap">
+          <div className="circle">
+            <div className="mask full-1">
+              <div className="fill-1"></div>
+            </div>
+
+            <div className="mask half">
+              <div className="fill-1"></div>
+            </div>
+            <div className="inside-circle flex justify-center items-center">
+              <span>
+                <h2 className="text-4xl  font-semibold">4.5</h2>
+                <p>km/h</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="spec-card">
+        <div className="circle-wrap">
+          <div className="circle">
+            <div className="mask full-1">
+              <div className="fill-1"></div>
+            </div>
+
+            <div className="mask half">
+              <div className="fill-1"></div>
+            </div>
+            <div className="inside-circle flex justify-center items-center">
+              <span>
+                <h2 className="text-4xl  font-semibold">4.5</h2>
+                <p>km/h</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="spec-card">
+        <div className="circle-wrap">
+          <div className="circle">
+            <div className="mask full-1">
+              <div className="fill-1"></div>
+            </div>
+
+            <div className="mask half">
+              <div className="fill-1"></div>
+            </div>
+            <div className="inside-circle flex justify-center items-center">
+              <span>
+                <h2 className="text-4xl  font-semibold">4.5</h2>
+                <p>km/h</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="spec-card">
+        <div className="circle-wrap">
+          <div className="circle">
+            <div className="mask full-1">
+              <div className="fill-1"></div>
+            </div>
+
+            <div className="mask half">
+              <div className="fill-1"></div>
+            </div>
+            <div className="inside-circle flex justify-center items-center">
+              <span>
+                <h2 className="text-4xl  font-semibold">4.5</h2>
+                <p>km/h</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>

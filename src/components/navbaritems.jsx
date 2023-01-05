@@ -11,7 +11,7 @@ export const navbaritems = [
 
     {
         title: 'Book',
-        link: '/cars',
+        link: '/details',
         library: <MdStars/>
     },
 
