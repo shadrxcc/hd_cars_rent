@@ -1,9 +1,13 @@
 import React from 'react'
 import ferrari from '../assets/ferrari.png'
+import Navbar from './navbar'
 import Specscard from './specscard'
 
 const Cardetails = () => {
   return (
+  <>
+  <div className='flex'>
+  <Navbar/>
     <div>
         <h1 className='text-center text-white font-bold text-4xl pt-5' data-aos="slide-down"  data-aos-duration="1500">Enzo Ferrari</h1>
 
@@ -14,6 +18,8 @@ const Cardetails = () => {
         <Specscard/>
         
     </div>
+    </div>
+    </>
   )
 }
 

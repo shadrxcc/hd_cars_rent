@@ -5,6 +5,7 @@ import ford from '../assets/ford.png'
 import mclaren from '../assets/mclaren.png'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Navbar from './navbar'
 
 const Carmenu = () => {
     const responsive = {
@@ -28,6 +29,8 @@ const Carmenu = () => {
 };
   return (
     <>
+ 
+       
     <Carousel className='duration-300' responsive={responsive}>
   <div className='container relative'>
     <div className='card relative'>
@@ -37,20 +40,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -64,20 +58,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -91,20 +76,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -118,20 +94,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -145,20 +112,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -172,20 +130,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -198,20 +147,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
@@ -224,20 +164,11 @@ const Carmenu = () => {
         <div className='body'>
             <h2>Enzo Ferrari</h2>
             <div className='price'>
-                <h2>Size: </h2>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
+                <h2>$5000</h2>
 
             </div>
-            <div className='color'>
-                <h2>Color: </h2>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <a href="#">Buy Now</a>
+            
+            <a href="/details">Check me out</a>
 
         </div>
     </div>
