@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import store from './redux/store/store';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import RouteSwitch from './RouteSwitch';
@@ -9,7 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-      <RouteSwitch />
+      <Provider store={store}>
+        <RouteSwitch />
+      </Provider>
     </React.StrictMode>
   </BrowserRouter>
 );
