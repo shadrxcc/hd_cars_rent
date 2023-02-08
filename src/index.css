@@ -167,7 +167,7 @@ border-radius: 4px;
   background: #e91e63;
 }
 
-a {
+.check {
   display: inline-block;
   padding: 10px 20px;
   background: #fff;
@@ -181,7 +181,7 @@ a {
   transition: 0.5s;
 }
 
-.card:hover .body a {
+.card:hover .body .check {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.75s;

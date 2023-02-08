@@ -16,7 +16,7 @@ const RouteSwitch = () => {
     <>
     <Routes>
        <Route path="/cars" element={<Carmenu/>}></Route>
-       <Route path="/details" element={<Cardetails/>}></Route>
+       <Route path="/details/:carId" element={<Cardetails/>}></Route>
        <Route path="/add-cars" element={<Addcars/>}></Route>
        <Route path="/bookings" element={<Bookings/>}></Route>
        <Route path="/book-car" element={<Book/>}></Route>

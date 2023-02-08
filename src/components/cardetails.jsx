@@ -1,22 +1,42 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ferrari from '../assets/ferrari.png'
 import Navbar from './navbar'
 import Specscard from './specscard'
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
+import axios from 'axios'
+import { selectedCars } from '../redux/actions/actions';
 
 const Cardetails = () => {
+  const cars = useSelector((state) => state.carsReducer)
+  const dispatch = useDispatch();
+  const { carId } = useParams()
+
+  const getSelectedcars = async () => {
+    const response = await axios.get(`http://localhost:3100/car_menu_items/${carId}`)
+    dispatch(selectedCars(response.data))
+  }
+const { car_name, car_description, image_url, price } = cars
+
+  useEffect(() => {
+    if (carId && carId !== '') {
+      getSelectedcars();
+    }
+  }, [carId])
   return (
   <>
   <div className='flex'>
   <Navbar/>
+
     <div>
-        <h1 className='text-center text-white font-bold text-4xl pt-5' data-aos="slide-down"  data-aos-duration="1500">Enzo Ferrari</h1>
+        <h1 className='text-center text-white font-bold text-4xl pt-5' data-aos="slide-down"  data-aos-duration="1500">{car_name}</h1>
 
         <div className='' data-aos-easing="ease-in-out-cubic" data-aos="zoom-in-up" data-aos-duration="1500">
-            <img src={ferrari} className="mx-auto" alt="ferrari" />
+            <img src={image_url} className="mx-auto" alt="ferrari" />
         </div>
-        <div><p className='text-white px-20 pb-3 text-center' data-aos="zoom-out-right" data-aos-duration="1000">The Enzo Ferrari (Type F140) mid-engine sports car</p></div>
+        <div><p className='text-white px- pb-3 text-center' data-aos="zoom-out-right" data-aos-duration="1000">{car_description}</p></div>
         <Specscard/>
-        
+        <a className='text-white text-center bg-red-700' href='/book-car'>Book this car</a>
     </div>
     </div>
     </>

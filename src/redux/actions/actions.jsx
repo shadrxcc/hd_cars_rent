@@ -1,36 +1,29 @@
-import addCars from "../api";
+import { getCars } from "../api";
 import { Actiontypes } from "../action-types/actiontypes";
 
+export const setCars = (cars) => {
+  return {
+    type: Actiontypes.SET_CARS,
+    payload: items,
+  };
+};
 
-const addCar = (car) => async (dispatch) => {
-  const received = await addCars(car);
-  if (received) {
-    dispatch({
-        type: Actiontypes.ADD_CARS,
-        payload: received,
-    })
-  }
-}
-
-export default addCar
-
-export const getCar = (cars) => {
-    return {
-        type: Actiontypes.SET_CARS,
-        payload: cars,
-    }
-}
+export const setReservation = (cars) => {
+  return {
+    type: Actiontypes.SET_RESERVATION,
+    payload: items,
+  };
+};
 
 export const selectedCar = (car) => {
-    return {
-        type: Actiontypes.SELECTED_CAR,
-        payload: car
-    }
+  return {
+    type: Actiontypes.SELECTED_CAR,
+    payload: items,
+  };
 }
 
-export const removeCar = (car) => {
-    return {
-       type: Actiontypes.REMOVE_CAR,
-       payload: car,
-    }
+export const removeCar = () => {
+  return {
+    type: Actiontypes.REMOVE_CAR,
+  };
 }

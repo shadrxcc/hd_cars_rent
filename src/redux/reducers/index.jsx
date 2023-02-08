@@ -1,10 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import { carReducer, addCarReducer, selectedCarReducer } from "./reducer";
+import { carReducer, selectedCarReducer, reservationReducer } from "./reducer";
 
 const rootReducer = combineReducers({
     carReducer,
-    addCarReducer,
     selectedCarReducer,
+    reservationReducer
 })
 
 export default rootReducer;

@@ -1,16 +1,11 @@
-import React from 'react'
+const url = 'http://localhost:3100/car_menu_items';
 
-const addCars = async (cars) => {
-    const response = await fetch('http://127.0.0.1:3000/cars_menu_items', {
-        method: 'POST',
-        credentials: 'same-origin',
-        headers: {
-            accepts: 'application/json'
-        },
-        body: cars,
-    })
+const getCars = async () => {
+  const request = await fetch(url);
+  const result = await request.json();
+  return result;
+};
 
-  return response.json();
-}
-
-export default addCars
+export {
+  getCars
+};
