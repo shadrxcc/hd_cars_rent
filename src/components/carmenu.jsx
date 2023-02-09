@@ -6,17 +6,28 @@ import ford from "../assets/ford.png";
 import mclaren from "../assets/mclaren.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
+import axios from 'axios'
 import Navbar from "./navbar";
 import { useEffect } from "react";
-import { loadCars } from "../redux/actions/actions";
+import { loadCars, setCars } from "../redux/actions/actions";
 import Carcomponent from "./carcomponent";
 import { Link } from "react-router-dom";
 
-const Carmenu = () => {
-  const cars = useSelector((state) => state.carsReducer.cars);
-  const dispatch = useDispatch();
 
+const Carmenu = () => {
+  const dispatch = useDispatch()
+  const getCars = async () => {
+    const response = await axios
+    .get(`http://127.0.0.1:3100/car_menu_items`)
+    .catch((err) => {
+      console.log('err', err);
+    });
+    dispatch(setCars(response.data));
+  };
+  
+  useEffect(() => {
+    getCars();
+  }, []);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -38,7 +49,7 @@ const Carmenu = () => {
   };
   return (
     <>
-      <Navbar />
+      <Carcomponent/>
       {/* <Carousel className="duration-300" responsive={responsive}> */}
         {/* { &&
           cars.map((car) => {

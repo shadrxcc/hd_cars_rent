@@ -5,16 +5,16 @@ import Specscard from './specscard'
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
-import { selectedCars } from '../redux/actions/actions';
+import { selectedCar } from '../redux/actions/actions';
 
 const Cardetails = () => {
-  const cars = useSelector((state) => state.carsReducer)
+  const cars = useSelector((state) => state.selectedCarReducer)
   const dispatch = useDispatch();
   const { carId } = useParams()
 
   const getSelectedcars = async () => {
     const response = await axios.get(`http://localhost:3100/car_menu_items/${carId}`)
-    dispatch(selectedCars(response.data))
+    dispatch(selectedCar(response.data))
   }
 const { car_name, car_description, image_url, price } = cars
 

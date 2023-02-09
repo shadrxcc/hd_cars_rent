@@ -31,6 +31,7 @@ const Landing = () => {
 
 export default Landing;
 
+
 gsap.fromTo(
   ".landing-page",
   { opacity: 1 },
