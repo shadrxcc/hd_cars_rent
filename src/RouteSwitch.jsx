@@ -10,6 +10,7 @@ import Login from './components/login'
 import Signup from './components/signup'
 import Deletecars from './pages/delete'
 import Landing from './pages/landing'
+import Welcome from './pages/welcome'
 
 const RouteSwitch = () => {
   return (
@@ -24,6 +25,7 @@ const RouteSwitch = () => {
        <Route path="/landing" element={<Landing/>}></Route>
        <Route path="/login" element={<Login/>}></Route>
        <Route path="/sign-up" element={<Signup/>}></Route>
+       <Route path="/welcome" element={<Welcome/>}></Route>
     </Routes>
    
     </>

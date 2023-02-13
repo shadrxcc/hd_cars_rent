@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Login = () => {
+  const [username, setUsername] = useState('')
+  const navigate = useNavigate()
+const handleChange = (e) => {
+  setUsername(e.target.value)
+}
+
+const signIn = (e) => {
+	e.preventDefault();
+	axios.get("http://localhost:3100/tokens", username)
+	.then((res) => console.log(res)
+	.catch((err) => console.log(err)
+}
+
   return (
     <div
         id="login"
         className="container h-screen relative flex justify-center items-center"
       >
-        <div className='m-3' data-aos="zoom-in-up" data-aos-duration="1000">
-          <p className="text-white text-lg md:text-3xl mb-3">Login</p>
-          <input type="text" name="username" id="username" className='text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full' placeholder="Enter username" />
-          <input type="password" name="password" id="password" className='text-white rounded-lg pl-3 bg-[#232323] py-2 my-2 w-full' placeholder='Enter password' />
-          <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">Sign In</button>
+
+        <div className='' data-aos="zoom-in-up" data-aos-duration="1000">
+          <p className="text-white text-lg md:text-2xl mb-3">Sign in</p>
+          <form onSubmit={signIn}>
+          <input type="text" name="username" id="username" value={username} onChange={handleChange} className='text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full' placeholder="Enter username" />
+          <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">Sign In</button></form>
+          <p className="text-white">New user? <span className='pl-2 text-red-500'><Link to={`/sign-up`}>Create account</Link></span></p>
         </div>
       </div>
   )
