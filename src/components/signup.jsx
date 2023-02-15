@@ -10,11 +10,11 @@ const Signup = () => {
     setUsername(e.target.value);
   };
 
-  const signUp = (e) => {
-	e.preventDefault();
-	axios.get("http://localhost:3100/users", username)
-	.then((res) => console.log(res)
-	.catch((err) => console.log(err)
+const signUp = (e) => {
+  e.preventDefault();
+  axios.get('http://localhost:3100/users', username)
+  .then(response => console.log(response))
+  .catch(error => console.log(error))
 }
 
   return (
