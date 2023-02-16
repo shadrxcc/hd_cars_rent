@@ -8,7 +8,12 @@ import axios from 'axios'
 import { selectedCar } from '../redux/actions/actions';
 
 const Cardetails = () => {
+
+ 
   const cars = useSelector((state) => state.selectedCarReducer)
+   const { car_name, car_description, image_url, price } = cars 
+   window.localStorage.setItem('car', car_name)
+  window.localStorage.setItem('carimage', image_url)
   const dispatch = useDispatch();
   const { carId } = useParams()
 
@@ -16,7 +21,7 @@ const Cardetails = () => {
     const response = await axios.get(`http://localhost:3100/car_menu_items/${carId}`)
     dispatch(selectedCar(response.data))
   }
-const { car_name, car_description, image_url, price } = cars
+
 
   useEffect(() => {
     if (carId && carId !== '') {
