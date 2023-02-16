@@ -3,8 +3,12 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const [username, setUsername] = useState("");
-  const navigate = useNavigate();
+window.localStorage.setItem('isLoggedIn', false)
+const [username, setUsername] = useState("");
+ const navigate = useNavigate();
+ const errorMessage = (input) => {
+      return input
+     };
 
   const handleChange = (e) => {
     setUsername(e.target.value);
@@ -12,9 +16,18 @@ const Signup = () => {
 
 const signUp = (e) => {
   e.preventDefault();
-  axios.get('http://localhost:3100/users', username)
-  .then(response => console.log(response))
-  .catch(error => console.log(error))
+  const formData = new FormData();
+  if (username === "" || username === undefined) {
+    return errorMessage('enter username');
+  } else {
+    formData.append('username', username);
+
+  fetch("http://localhost:3100/users", 
+  {method: 'POST', body: formData})
+  .then(res => res.json())
+  .then(navigate('/login'))
+  }
+  
 }
 
   return (
@@ -24,16 +37,16 @@ const signUp = (e) => {
     >
       <div className="m-3" data-aos="zoom-in-up" data-aos-duration="1000">
         <p className="text-white text-lg md:text-2xl mb-3">Sign up</p>
+        {errorMessage()}
         <form onSubmit={signUp}>
           <input
             type="text"
             name="username"
             id="username"
-            value={username}
-            onChange={handleChange}
             className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
             required
             placeholder="Enter username"
+            onChange={handleChange}
           />
           <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
             Sign up
