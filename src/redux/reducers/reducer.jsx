@@ -26,6 +26,8 @@ export const selectedCarReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case Actiontypes.SELECTED_CAR:
       return {...state, ...payload};
+      case Actiontypes.REMOVE_CAR:
+        return {}
     default:
       return state;
   };

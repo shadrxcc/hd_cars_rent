@@ -49,30 +49,10 @@ const Carmenu = () => {
   };
   return (
     <>
+      
+      <Carousel className="duration-300" responsive={responsive}> 
       <Carcomponent/>
-      {/* <Carousel className="duration-300" responsive={responsive}> */}
-        {/* { &&
-          cars.map((car) => {
-            return (
-              <div className='container relative' key={car.id}>
-    <div className='card relative'>
-        <div className='card-img'>
-            <img src={car.image} className='w-full img' alt="car" />
-        </div>
-        <div className='body'>
-            <h2>{car.carname}</h2>
-            <div className='price'>
-                <h2>{car.price}</h2>
-
-            </div>
-            <Link to={`/details/${car.id}`}><p className="check">Check meee out</p></Link>
-
-        </div>
-    </div>
-</div>
-            );
-          })} */}
-      {/* </Carousel> */}
+     </Carousel>
     </>
   );
 };

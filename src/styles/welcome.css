@@ -1,0 +1,23 @@
+.welcome {
+    
+    position: relative;
+}
+
+.welcome::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('/src/assets/enzo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    filter: brightness(50%);
+}
+
+.welcome-content {
+    position: relative;
+}

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Landing from "./landing";
+import '../styles/welcome.css'
 
 const Welcome = () => {
   const [username, setUsername] = useState("");
@@ -21,7 +21,12 @@ const Welcome = () => {
   const renderCondition = () => {
     if (loggedIn === "true") {
       return (
-        <div>Welcome {username.username}</div>
+        <div className="w-full flex items-center justify-center welcome h-full">
+        <div className="text-white flex flex-col gap-y-4 pt-[10em] welcome-content text-center">
+        <p className="text-3xl">Welcome <span className="text-red-500"> {username.username}</span></p>  
+        <Link to={`/cars`}><button className="bg-red-700 rounded-lg p-3">Checkout available whips</button></Link>
+          </div>
+         </div>
       )
     } else {
       return (
