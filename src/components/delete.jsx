@@ -10,7 +10,7 @@ const Delete = () => {
           <span className="text-white flex flex-column gap-2">
             <h3>Enzo Ferrari</h3>
           </span>
-        </div>
+        </div> 
 
         <div>
           <AiFillDelete className='text-white text-lg hover:text-red-800'/>

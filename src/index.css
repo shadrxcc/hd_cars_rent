@@ -185,5 +185,8 @@ border-radius: 4px;
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.75s;
+}
 
+#navbar.active {
+  right: 8.5em;
 }

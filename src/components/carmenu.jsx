@@ -28,6 +28,33 @@ const Carmenu = () => {
   useEffect(() => {
     getCars();
   }, []);
+
+  const loggedIn = window.localStorage.getItem('isLoggedIn');
+
+    const renderCondition = () => {
+    if (loggedIn === "true") {
+      return (
+        <>
+         {/* <Carousel className="duration-300" responsive={responsive}>  */}
+      <Carcomponent/>
+     {/* </Carousel> */}
+        </>
+      )
+    } else {
+      return (
+        <div
+        id="landing"
+        className="container h-screen relative flex justify-center items-center"
+      >
+        <div>
+          <p className="text-white text-center text-lg md:text-2xl mb-3">Sorry, you have to be signed in to view this page</p>
+          <Link to={`/login`}><button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">Sign In</button></Link>
+          <Link to={`/sign-up`}><button className="bg-white rounded-lg text-dark py-2 my-2 w-full">Sign Up</button></Link>
+        </div>
+      </div>
+      )
+    }
+  }
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -50,9 +77,7 @@ const Carmenu = () => {
   return (
     <>
       
-      <Carousel className="duration-300" responsive={responsive}> 
-      <Carcomponent/>
-     </Carousel>
+     {renderCondition()}
     </>
   );
 };

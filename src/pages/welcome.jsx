@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect } from "react";
 import jwtDecode from "jwt-decode";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import '../styles/welcome.css'
 
 const Welcome = () => {
   const [username, setUsername] = useState("");
-  
+  const navigate = useNavigate()
   const loggedIn = window.localStorage.getItem('isLoggedIn');
   useEffect(() => {
     if (loggedIn === "true") {
@@ -18,6 +18,12 @@ const Welcome = () => {
     
   }, [setUsername]);
 
+  const logout = () => {
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('isLoggedIn', false);
+    navigate("/landing");
+  }
+
   const renderCondition = () => {
     if (loggedIn === "true") {
       return (
@@ -25,6 +31,7 @@ const Welcome = () => {
         <div className="text-white flex flex-col gap-y-4 pt-[10em] welcome-content text-center">
         <p className="text-3xl">Welcome <span className="text-red-500"> {username.username}</span></p>  
         <Link to={`/cars`}><button className="bg-red-700 rounded-lg p-3">Checkout available whips</button></Link>
+    <button className="bg-red-700 rounded-lg p-3" onClick={logout}>Sign out</button>
           </div>
          </div>
       )

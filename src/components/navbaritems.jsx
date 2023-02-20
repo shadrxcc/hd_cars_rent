@@ -8,22 +8,16 @@ export const navbaritems = [
         link: '/cars',
         library: <AiFillCar/>
     },
-
-    {
-        title: 'Book',
-        link: '/details',
-        library: <MdStars/>
-    },
-
+    
     {
         title: 'My Bookings',
-        link: '/cars',
+        link: '/bookings',
         library: <MdSwapVerticalCircle/>
     },
 
     {
         title: 'Add Cars',
-        link: '/cars',
+        link: '/add-cars',
         library: <MdAddCircle/>
     },
 

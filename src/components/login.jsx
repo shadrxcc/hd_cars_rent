@@ -33,14 +33,14 @@ const Login = () => {
             </div>
           );
           console.log(response.jwt);
-        window.localStorage.setItem("jwt", response.jwt);
-        window.localStorage.setItem("isLoggedIn", true);
-        if (response.jwt === undefined) {
+          window.localStorage.setItem("jwt", response.jwt);
+          window.localStorage.setItem("isLoggedIn", true);
+          if (response.jwt === undefined) {
             console.log("Username not found");
-        errorMessage("Username not found");
-        } else {
-          navigate("/welcome");
-        }
+            errorMessage("Username not found");
+          } else {
+            navigate("/welcome");
+          }
         });
     }
   };
