@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
 
 const Carcomponent = () => {
     const cars = useSelector((state) => state.carReducer.cars);
-   
+   const [width, setWidth] = useState(0)
+   const carousel = useRef()
+const rmnd = 72
+   useEffect(() => {
+    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth)
+setWidth(carousel.current.scrollWidth - rmnd)
+   }, [])
    const renderList = cars.map((car) => {
     const {id, car_name, image_url, price} = car
     return (
-        <div className='container relative' key={id}>
+        <motion.div className='container relative p-2' key={id}>
     <div className='card relative'>
         <div className='card-img'>
             <img src={image_url} className='w-full img' alt="car" />
@@ -23,38 +30,20 @@ const Carcomponent = () => {
 
         </div>
     </div>
-</div>
+</motion.div>
     )
    })
     
-    // const cars = useSelector((state) => state.carsReducer);
-    // const wrap = cars.cars
-    // console.log(wrap)
-
-//   const renderList = cars.map((car) => {
-//     const {id, carname, image, description} = car;
-//       return (
-/* <div className='container relative' key={id}>
-    <div className='card relative'>
-        <div className='card-img'>
-            <img src={image} className='w-full img' alt="car" />
-        </div>
-        <div className='body'>
-            <h2>{carname}</h2>
-            <div className='price'>
-                <h2></h2>
-
-            </div>
-            <a href="/details">Check meee out</a>
-
-        </div>
-    </div>
-</div> */
-//   )
-// })
-
   return (
-   <>{renderList}</>
+   <>
+   <div>
+   <motion.div className="carousel" ref={carousel}>
+    <motion.div className="inner-carousel flex" drag="x" dragConstraints={{ right: 0, left: -width}
+}>
+        {renderList}
+    </motion.div>
+   </motion.div></div>
+   </>
   )
 }
 

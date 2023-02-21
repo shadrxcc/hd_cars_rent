@@ -16,9 +16,9 @@ const Mobilenav = () => {
         return (
             <>
             <div className=''>
-        <header className='flex justify-between fixed items-center w-full'>
+        <header className='flex justify-between p-2 fixed items-center w-full'>
             <div>
-                <h2>hello</h2>
+                <Link to={`/welcome`}><h2>HDCARS</h2></Link>
             </div>
         <nav>
 

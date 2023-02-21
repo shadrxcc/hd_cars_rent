@@ -35,9 +35,10 @@ const Carmenu = () => {
     if (loggedIn === "true") {
       return (
         <>
-         {/* <Carousel className="duration-300" responsive={responsive}>  */}
-      <Carcomponent/>
-     {/* </Carousel> */}
+        <div className="pt-[8em] pl-[2em]">
+        <div><h2 className="text-white text-2xl">Featured Cars</h2></div>
+         <div className="">
+      <Carcomponent/></div></div>
         </>
       )
     } else {

@@ -190,3 +190,8 @@ border-radius: 4px;
 #navbar.active {
   right: 8.5em;
 }
+
+.carousel {
+  cursor: grab;
+  overflow: hidden;
+}

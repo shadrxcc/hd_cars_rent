@@ -9,7 +9,7 @@ import { selectedCar } from "../redux/actions/actions";
 
 const Cardetails = () => {
   const cars = useSelector((state) => state.selectedCarReducer);
-  const { car_name, car_description, image_url, price } = cars;
+  const { car_name, car_description, image_url, consumption, speed } = cars;
   window.localStorage.setItem("car", car_name);
   window.localStorage.setItem("carimage", image_url);
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Cardetails = () => {
   }, [carId]);
   return (
     <>
-      <div className="flex">
+      <div className="flex pb-5">
         <div>
           <h1
             className="text-center text-white font-bold text-4xl pt-5"
@@ -56,10 +56,11 @@ const Cardetails = () => {
               {car_description}
             </p>
           </div>
-          <Specscard />
-          <a className="text-white text-center bg-red-700" href="/book-car">
+          <Specscard consumption={consumption} speed={speed} />
+          <div className="flex justify-center pt-4">
+          <a className="bg-red-700 rounded-lg text-white px-6 py-2 text-center" href="/book-car">
             Book this car
-          </a>
+          </a></div>
         </div>
       </div>
     </>

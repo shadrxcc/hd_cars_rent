@@ -23,7 +23,7 @@ const Bookings = () => {
     .catch((err) => console.log(err))
   }
   const renderList = bookings.map((book) => {
-    const { id, car, user, start_date, location, price } = book;
+    const { id, car, user, start_date, image, location, price } = book;
     if (currentUser === user) {
       return (
       <div
@@ -34,7 +34,7 @@ const Bookings = () => {
           <AiFillDelete />
         </button>
         <div className="m-auto">
-          <img src={ferrari} className="w-40" alt="ferrari" />
+          <img src={image} className="w-40" alt="ferrari" />
         </div>
 
         <div className="flex justify-between">
