@@ -1,4 +1,3 @@
-import ferrari from "../assets/ferrari.png";
 import { AiFillDelete } from "react-icons/ai";
 import jwtDecode from "jwt-decode";
 import { useSelector } from "react-redux";
@@ -52,7 +51,6 @@ const Bookings = () => {
     } else {
       return
     }
-    
   });
 
   return (

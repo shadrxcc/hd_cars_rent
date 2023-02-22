@@ -23,7 +23,7 @@ const Book = () => {
   const [car] = useState(title);
   const [bookDate, setDate] = useState("");
   const [location, setLocation] = useState("");
-  const [image] = useState(carimage)
+  const [image] = useState(carimage);
 
   const locationChange = (e) => {
     setLocation(e.target.value);

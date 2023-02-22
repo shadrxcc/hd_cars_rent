@@ -1,34 +1,31 @@
-import React, { Component, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
-window.localStorage.setItem('isLoggedIn', false)
-const [username, setUsername] = useState("");
- const navigate = useNavigate();
- const errorMessage = (input) => {
-      return input
-     };
+  window.localStorage.setItem("isLoggedIn", false);
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+  const errorMessage = (input) => {
+    return input;
+  };
 
   const handleChange = (e) => {
     setUsername(e.target.value);
   };
 
-const signUp = (e) => {
-  e.preventDefault();
-  const formData = new FormData();
-  if (username === "" || username === undefined) {
-    return errorMessage('enter username');
-  } else {
-    formData.append('username', username);
+  const signUp = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    if (username === "" || username === undefined) {
+      return errorMessage("enter username");
+    } else {
+      formData.append("username", username);
 
-  fetch("http://localhost:3100/users", 
-  {method: 'POST', body: formData})
-  .then(res => res.json())
-  .then(navigate('/login'))
-  }
-  
-}
+      fetch("http://localhost:3100/users", { method: "POST", body: formData })
+        .then((res) => res.json())
+        .then(navigate("/login"));
+    }
+  };
 
   return (
     <div

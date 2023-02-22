@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import Desktopnav from "./desktopnavbar";
 import Mobilenav from "./mobilenav";
 
-
 const viewPort = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const location = useLocation();
@@ -23,9 +22,9 @@ const validateUser = () => {
   if (location.pathname === "/landing") {
     return null;
   } else if (location.pathname === "/sign-up") {
-    return null
+    return null;
   } else if (location.pathname === "/login") {
-    return null
+    return null;
   } else {
     return width < breakpoint ? <Mobilenav /> : <Desktopnav />;
   }

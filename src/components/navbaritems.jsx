@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiFillCar } from "react-icons/ai";
-import { MdAddCircle, MdRemoveCircle, MdStars, MdSwapVerticalCircle } from "react-icons/md";
+import { MdAddCircle, MdRemoveCircle, MdSwapVerticalCircle } from "react-icons/md";
 
 export const navbaritems = [
     {

@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import ferrari from "../assets/ferrari.png";
-import Navbar from "./navbar";
 import Specscard from "./specscard";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -58,9 +56,13 @@ const Cardetails = () => {
           </div>
           <Specscard consumption={consumption} speed={speed} />
           <div className="flex justify-center pt-4">
-          <a className="bg-red-700 rounded-lg text-white px-6 py-2 text-center" href="/book-car">
-            Book this car
-          </a></div>
+            <a
+              className="bg-red-700 rounded-lg text-white px-6 py-2 text-center"
+              href="/book-car"
+            >
+              Book this car
+            </a>
+          </div>
         </div>
       </div>
     </>

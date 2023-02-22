@@ -1,4 +1,3 @@
-import { getCars } from "../api";
 import { Actiontypes } from "../action-types/actiontypes";
 
 export const setCars = (cars) => {

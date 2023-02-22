@@ -1,7 +1,5 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import car from "../assets/eastwood-104.png";
 import "../styles/landing.css";
 
 const Landing = () => {
@@ -12,9 +10,19 @@ const Landing = () => {
         className="container h-screen relative flex justify-center items-center"
       >
         <div>
-          <p className="text-white text-2xl md:text-3xl mb-3">WELCOME TO HD CARS</p>
-          <Link to={`/login`}><button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">Sign In</button></Link>
-          <Link to={`/sign-up`}><button className="bg-white rounded-lg text-dark py-2 my-2 w-full">Sign Up</button></Link>
+          <p className="text-white text-2xl md:text-3xl mb-3">
+            WELCOME TO HD CARS
+          </p>
+          <Link to={`/login`}>
+            <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
+              Sign In
+            </button>
+          </Link>
+          <Link to={`/sign-up`}>
+            <button className="bg-white rounded-lg text-dark py-2 my-2 w-full">
+              Sign Up
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -31,7 +39,6 @@ const Landing = () => {
 
 export default Landing;
 
-
 gsap.fromTo(
   ".landing-page",
   { opacity: 1 },
@@ -46,7 +53,8 @@ gsap.fromTo(
   ".logo-name",
   {
     y: 50,
-    opacity: 1 },
+    opacity: 1,
+  },
   {
     y: 0,
     opacity: 1,

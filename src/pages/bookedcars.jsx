@@ -24,7 +24,8 @@ const Bookedcars = () => {
             <h2 className="text-white text-2xl pl-[1em]">Booked Cars</h2>
           </div>
           <div className="grid gap-2 md:grid-cols-2">
-          <Bookings /></div>
+            <Bookings />
+          </div>
         </div>
       );
     } else {
