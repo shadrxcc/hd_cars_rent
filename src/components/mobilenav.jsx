@@ -14,7 +14,7 @@ const Mobilenav = () => {
     const signOut = () => {
     localStorage.removeItem("jwt");
     localStorage.removeItem("isLoggedIn", false);
-    navigate("/landing");
+    navigate("/");
   };
 
     const showNav = () => {
@@ -24,7 +24,7 @@ const Mobilenav = () => {
             <div className=''>
         <header className='flex justify-between bg-[#181818] p-2 z-10 fixed items-center w-full'>
             <div>
-                <Link to={`/`}><h2>HDCARS</h2></Link>
+                <Link to={`/welcome`}><h2>HDCARS</h2></Link>
             </div>
         <nav>
 

@@ -12,7 +12,7 @@ const Desktopnav = () => {
   const signOut = () => {
     localStorage.removeItem("jwt");
     localStorage.removeItem("isLoggedIn", false);
-    navigate("/landing");
+    navigate("/");
   };
 
   const loggedIn = window.localStorage.getItem("isLoggedIn")
@@ -32,7 +32,7 @@ const Desktopnav = () => {
         }`}
         onClick={() => setOpen(!open)}
       />
-<span className={`${!open && "hidden"}`}><Link to={`/`}><h2 className="pl-5">HDCARS</h2></Link></span>
+<span className={`${!open && "hidden"}`}><Link to={`/welcome`}><h2 className="pl-5">HDCARS</h2></Link></span>
       <ul className="pt-16 px-2 flex flex-col justify-center">
         {navbaritems.map((value, key) => {
           return (

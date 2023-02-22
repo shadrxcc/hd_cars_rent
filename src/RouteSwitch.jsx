@@ -26,10 +26,10 @@ const RouteSwitch = () => {
        <Route path="/bookings" element={<Bookedcars/>}></Route>
        <Route path="/book-car" element={<Book/>}></Route>
        <Route path="/delete" element={<Deletecars/>}></Route>
-       <Route path="/landing" element={<Landing/>}></Route>
+       <Route path="/" element={<Landing/>}></Route>
        <Route path="/login" element={<Login/>}></Route>
        <Route path="/sign-up" element={<Signup/>}></Route>
-       <Route path="/" element={<Welcome/>}></Route>
+       <Route path="/welcome" element={<Welcome/>}></Route>
        <Route path="/mobile" element={<Mobilenav/>}></Route>
     </Routes>
    </div>

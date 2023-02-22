@@ -18,13 +18,13 @@ const Landing = () => {
         </div>
       </div>
 
-      {/* <div className="landing-page bg-red-700 w-full h-full flex flex-column justify-center items-center gap-y-2 absolute top-0 left-0">
+      <div className="landing-page bg-red-700 w-full h-full flex flex-column justify-center items-center gap-y-2 absolute top-0 left-0">
         <div className="name-container">
           <div className="logo-name tracking-[16px] text-bold text-white text-2xl ml-3 text-center">
             HDCARS
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };
@@ -32,25 +32,25 @@ const Landing = () => {
 export default Landing;
 
 
-// gsap.fromTo(
-//   ".landing-page",
-//   { opacity: 1 },
-//   {
-//     opacity: 0,
-//     duration: 1.5,
-//     delay: 3.5,
-//   }
-// );
+gsap.fromTo(
+  ".landing-page",
+  { opacity: 1 },
+  {
+    opacity: 0,
+    duration: 1.5,
+    delay: 3.5,
+  }
+);
 
-// gsap.fromTo(
-//   ".logo-name",
-//   {
-//     y: 50,
-//     opacity: 1 },
-//   {
-//     y: 0,
-//     opacity: 1,
-//     duration: 1,
-//     delay: 0.5,
-//   }
-// );
+gsap.fromTo(
+  ".logo-name",
+  {
+    y: 50,
+    opacity: 1 },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    delay: 0.5,
+  }
+);

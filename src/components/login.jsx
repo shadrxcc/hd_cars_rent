@@ -39,7 +39,7 @@ const Login = () => {
             console.log("Username not found");
             errorMessage("Username not found");
           } else {
-            navigate("/");
+            navigate("/welcome");
           }
         });
     }
