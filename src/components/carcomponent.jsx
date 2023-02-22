@@ -7,7 +7,7 @@ const Carcomponent = () => {
     const cars = useSelector((state) => state.carReducer.cars);
    const [width, setWidth] = useState(0)
    const carousel = useRef()
-const rmnd = 72
+const rmnd = 70
    useEffect(() => {
     console.log(carousel.current.scrollWidth, carousel.current.offsetWidth)
 setWidth(carousel.current.scrollWidth - rmnd)
@@ -26,7 +26,7 @@ setWidth(carousel.current.scrollWidth - rmnd)
                 <h2>{price}</h2>
 
             </div>
-            <Link to={`/details/${id}`}><p className="check">Check meee out</p></Link>
+            <Link to={`/details/${id}`}><p className="check">See more</p></Link>
 
         </div>
     </div>

@@ -29,10 +29,10 @@ const Cardetails = () => {
   }, [carId]);
   return (
     <>
-      <div className="flex pb-5">
+      <div className="flex m-auto pt-[5em] md:pt-1 pb-5">
         <div>
           <h1
-            className="text-center text-white font-bold text-4xl pt-5"
+            className="text-center text-white font-bold text-2xl pt-5"
             data-aos="slide-down"
             data-aos-duration="1500"
           >

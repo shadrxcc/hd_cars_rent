@@ -188,7 +188,8 @@ border-radius: 4px;
 }
 
 #navbar.active {
-  right: 8.5em;
+  right: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .carousel {

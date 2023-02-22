@@ -34,7 +34,7 @@ const Bookings = () => {
           <AiFillDelete />
         </button>
         <div className="m-auto">
-          <img src={image} className="w-40" alt="ferrari" />
+          <img src={image} className="w-[40em]" alt="ferrari" />
         </div>
 
         <div className="flex justify-between">

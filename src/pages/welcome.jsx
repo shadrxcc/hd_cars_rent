@@ -18,20 +18,13 @@ const Welcome = () => {
     
   }, [setUsername]);
 
-  const logout = () => {
-    localStorage.removeItem('jwt');
-    localStorage.removeItem('isLoggedIn', false);
-    navigate("/landing");
-  }
-
   const renderCondition = () => {
     if (loggedIn === "true") {
       return (
         <div className="w-full flex items-center justify-center welcome h-full">
         <div className="text-white flex flex-col gap-y-4 pt-[10em] welcome-content text-center">
         <p className="text-3xl">Welcome <span className="text-red-500"> {username.username}</span></p>  
-        <Link to={`/cars`}><button className="bg-red-700 rounded-lg p-3">Checkout available whips</button></Link>
-    <button className="bg-red-700 rounded-lg p-3" onClick={logout}>Sign out</button>
+        <Link to={`/cars`}><button className="bg-red-700 rounded-lg p-3">Checkout available cars</button></Link>
           </div>
          </div>
       )

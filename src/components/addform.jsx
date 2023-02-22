@@ -11,11 +11,15 @@ const Addcars = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
+  const [speed, setSpeed] = useState("");
+  const [consumption, setConsumption] = useState("");
 
   const nameHandler = (e) => setCarname(e.target.value);
   const descHandler = (e) => setDescription(e.target.value);
   const priceHandler = (e) => setPrice(e.target.value);
   const imageHandler = (e) => setImage(e.target.files[0]);
+  const speedHandler = (e) => setSpeed(e.target.value);
+  const consumptionHandler = (e) => setConsumption(e.target.value);
 
   const postCar = (e) => {
     e.preventDefault();
@@ -24,6 +28,8 @@ const Addcars = () => {
     formData.append("description", description);
     formData.append("price", price);
     formData.append("image_url", image);
+    formData.append("speed", speed);
+    formData.append("consumption", consumption);
     if (!carname || carname.trim().length === 0) {
       return errorMessage("enter name of car");
     } else if (!description || description.trim().length === 0) {
@@ -87,6 +93,28 @@ const Addcars = () => {
           rows="5"
           placeholder="Car Description"
         ></textarea>
+        <label className="text-white" htmlFor="speed">
+          Speed
+        </label>
+        <input
+          type="text"
+          onChange={speedHandler}
+          className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+          placeholder="200km/h"
+          name="speed"
+          id="speed"
+        />
+        <label className="text-white" htmlFor="consumption">
+         Consumption
+        </label>
+        <input
+          type="text"
+          onChange={consumptionHandler}
+          className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+          placeholder="3.4l/km"
+          name="consumption"
+          id="consumption"
+        />
         <label className="text-white" htmlFor="car-image">
           Car Image
         </label>

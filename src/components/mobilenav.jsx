@@ -11,24 +11,30 @@ const Mobilenav = () => {
 
     const loggedIn = window.localStorage.getItem("isLoggedIn")
 
+    const signOut = () => {
+    localStorage.removeItem("jwt");
+    localStorage.removeItem("isLoggedIn", false);
+    navigate("/landing");
+  };
+
     const showNav = () => {
       if (loggedIn === "true") {
         return (
             <>
             <div className=''>
-        <header className='flex justify-between p-2 fixed items-center w-full'>
+        <header className='flex justify-between bg-[#181818] p-2 z-10 fixed items-center w-full'>
             <div>
-                <Link to={`/welcome`}><h2>HDCARS</h2></Link>
+                <Link to={`/`}><h2>HDCARS</h2></Link>
             </div>
         <nav>
 
-            <ul id='navbar' className={`${clicked ? "#navbar active": "#navbar"} flex flex-col items-center gap-y-4 top-[5em] right-[-6em] absolute`}>
+            <ul id='navbar' className={`${clicked ? "#navbar active": "#navbar"} flex w-[100%] h-[100vh] flex-col bg-[#181818] pt-3 items-center gap-y-4 top-[4em] right-[-24.5em] absolute`}>
 {navbaritems.map((item, id) => {
     return (
         <Link to={item.link} key={id}><li className='active text-white'>{item.title}</li></Link>
         
     )
-})}<button className='bg-red-700 p-2 text-white rounded-lg'>Sign Out</button>
+})}<button onClick={signOut} className='bg-red-700 p-2 text-white rounded-lg'>Sign Out</button>
             </ul>
         </nav>
         <div className='mobile' onClick={buttonClick}>
@@ -43,27 +49,7 @@ const Mobilenav = () => {
       }
     }
   return (
-//     <div className=''>
-//         <header className='flex justify-between fixed items-center w-full'>
-//             <div>
-//                 <h2>hello</h2>
-//             </div>
-//         <nav>
 
-//             <ul id='navbar' className={`${clicked ? "#navbar active": "#navbar"} flex flex-col items-center gap-y-4 top-[5em] right-[-6em] absolute`}>
-// {navbaritems.map((item, id) => {
-//     return (
-//         <Link to={item.link} key={id}><li className='active text-white'>{item.title}</li></Link>
-        
-//     )
-// })}<button className='bg-red-700 p-2 text-white rounded-lg'>Sign Out</button>
-//             </ul>
-//         </nav>
-//         <div className='mobile' onClick={buttonClick}>
-//             <Hamburger color='white' size={24} rounded/>
-//         </div>
-//         </header>
-//     </div>
 <>{showNav()}</>
   )
 }

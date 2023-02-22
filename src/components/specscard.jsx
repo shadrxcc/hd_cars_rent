@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 const Specscard = ({consumption, speed}) => {
   return (
-    <div className="justify-center grid md:grid-cols-2">
+    <div className="justify-center grid gap-4 md:grid-cols-2">
       <div
         className="spec-card"
         data-aos="fade-up"
