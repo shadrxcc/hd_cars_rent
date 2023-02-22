@@ -16,6 +16,8 @@ const Book = () => {
 
   const title = window.localStorage.getItem("car");
   const carimage = window.localStorage.getItem("carimage");
+  const price = window.localStorage.getItem("price");
+
   const jwt = window.localStorage.getItem("jwt");
   const rest = jwtDecode(jwt);
   const navigate = useNavigate();
@@ -24,6 +26,7 @@ const Book = () => {
   const [bookDate, setDate] = useState("");
   const [location, setLocation] = useState("");
   const [image] = useState(carimage);
+  const [carprice] = useState(price);
 
   const locationChange = (e) => {
     setLocation(e.target.value);
@@ -51,6 +54,7 @@ const Book = () => {
       formData.append("start_date", bookDate);
       formData.append("location", location);
       formData.append("image", image);
+      formData.append("price", price);
 
       fetch("http://localhost:3100/bookings", {
         method: "POST",
@@ -101,6 +105,19 @@ const Book = () => {
               id="car"
               className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
             />
+
+            <label htmlFor="car" className="text-white">
+              Price
+            </label>
+            <input
+              type="text"
+              name="price"
+              disabled
+              value={price}
+              id="price"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+            />
+
             <label htmlFor="car" className="text-white">
               Image
             </label>

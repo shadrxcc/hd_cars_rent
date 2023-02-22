@@ -7,9 +7,10 @@ import { selectedCar } from "../redux/actions/actions";
 
 const Cardetails = () => {
   const cars = useSelector((state) => state.selectedCarReducer);
-  const { car_name, car_description, image_url, consumption, speed } = cars;
+  const { car_name, car_description, image_url, price, consumption, speed } = cars;
   window.localStorage.setItem("car", car_name);
   window.localStorage.setItem("carimage", image_url);
+  window.localStorage.setItem("price", price);
   const dispatch = useDispatch();
   const { carId } = useParams();
 
@@ -46,6 +47,13 @@ const Cardetails = () => {
             <img src={image_url} className="mx-auto" alt="ferrari" />
           </div>
           <div>
+            <p
+              className="text-white text-xl pb-3 text-center"
+              data-aos="zoom-out-up"
+              data-aos-duration="1000"
+            >
+              {price}
+            </p>
             <p
               className="text-white px- pb-3 text-center"
               data-aos="zoom-out-right"
