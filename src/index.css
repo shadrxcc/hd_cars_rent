@@ -129,16 +129,11 @@ h2 {
   line-height: 26px;
   font-size: 14px;
   display: inline-block;
-  color: #111;
   background: #fff;
   margin: 0 5px;
   transition: 0.5s;
   color: #fff;
   border-radius: 4px;
-}
-
-.price span:hover {
-  background: #9bdc28;
 }
 
 .color span {
@@ -147,6 +142,10 @@ h2 {
   background: #ff0;
   border-radius: 50%;
   margin: 0 5px;
+}
+
+.price span:hover {
+  background: #9bdc28;
 }
 
 .color span:nth-child(2) {

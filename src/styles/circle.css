@@ -7,7 +7,7 @@
   height: 150px;
   background: #d9d7da;
   border-radius: 50%;
-  margin: auto;
+  /*margin: auto;*/
 }
 
 .mask,
@@ -19,7 +19,7 @@
 }
 
 .mask {
-  clip: rect(0, 150p, 150px, 75px);
+  clip: rect(0, 150px, 150px, 75px);
 }
 
 .fill-1 {
@@ -37,6 +37,7 @@
   0% {
     transform: rotate(0deg);
   }
+  
   100% {
     transform: rotate(153deg);
   }
