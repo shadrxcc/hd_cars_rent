@@ -1,7 +1,7 @@
 # HDCARS
 > A car booking app where the company's list of cars available for booking are displayed. It allows authenticated users to able to see these cars, book a car of their choice and see the bookings they have made. It also allows users to add their own cars for listing as well as delete them.
 
-The app consumes a REST API created using the Ruby on Rails framework. Link to the API repo [hd_cars_rent_backend](https://github.com/shadrxcc/hd_cars_rent_backend)
+The app consumes a REST API created using the Ruby on Rails framework. API repo [hd_cars_rent_backend](https://github.com/shadrxcc/hd_cars_rent_backend)
 
 ## Live App
 [Vercel App](https://hd-cars-rent-git-dev-shadrxcc.vercel.app/)
@@ -45,14 +45,14 @@ Core features - for teams of each size
 - CSS
 - AOS
 ### Setup
-* Frontend
+## Frontend
 - Clone the GitHub Repository with 'git clone https://github.com/shadrxcc/hd_cars_rent.git'
 - Go to the Project Directory
 - Run ```npm install``` to install dependencies
 - Run ```npm start```. It runs the app in the development mode.<br>
 Open http://localhost:3000 to view it in your browser.
 
-* Backend
+## Backend
 - Go to the API repo [hd_cars_rent_backend](https://github.com/shadrxcc/hd_cars_rent_backend)
 - Clone the GitHub Repository with 'git clone https://github.com/shadrxcc/hd_cars_rent_backend.git'
 - Go to the Project Directory
