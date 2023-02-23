@@ -57,8 +57,25 @@ Open http://localhost:3000 to view it in your browser.
 - Clone the GitHub Repository with 'git clone https://github.com/shadrxcc/hd_cars_rent_backend.git'
 - Go to the Project Directory
 - Run ```bundle install``` to install dependencies
+- Setup database with:
+   ```
+   rails db:create
+   rails db:migrate
+   ```
+- Get seeded data with:
+
+```
+rails db:seed
+```
+- If you are on Linux start the database service with:
+
+```
+sudo service postgresql start
+```
+
 - Run ```rails s -p 3100```. It runs the app in the development mode.<br>
-Open http://localhost:3100 to view it in your browser or postman.
+
+Open `http://localhost:3100/` in your browser.
 
 ## Author
 
