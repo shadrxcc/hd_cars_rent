@@ -23,7 +23,7 @@ const Bookedcars = () => {
           <div>
             <h2 className="text-white text-2xl pl-[1em]">Booked Cars</h2>
           </div>
-          <div className="grid gap-2 md:grid-cols-2">
+          <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
             <Bookings />
           </div>
         </div>

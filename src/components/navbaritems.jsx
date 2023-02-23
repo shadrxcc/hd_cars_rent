@@ -1,29 +1,31 @@
 import React from 'react'
-import { AiFillCar } from "react-icons/ai";
-import { MdAddCircle, MdRemoveCircle, MdSwapVerticalCircle } from "react-icons/md";
+import { AiOutlineDelete } from "react-icons/ai";
+import { MdOutlineAdd, MdOutlineHistory } from "react-icons/md";
+import {IoCarOutline} from 'react-icons/io5'
+
 
 export const navbaritems = [
     {
         title: 'Cars',
         link: '/cars',
-        library: <AiFillCar/>
+        library: <IoCarOutline/>
     },
     
     {
         title: 'My Bookings',
         link: '/bookings',
-        library: <MdSwapVerticalCircle/>
+        library: <MdOutlineHistory/>
     },
 
     {
         title: 'Add Cars',
         link: '/add-cars',
-        library: <MdAddCircle/>
+        library: <MdOutlineAdd/>
     },
 
     {
         title: 'Delete Cars',
-        link: '/cars',
-        library: <MdRemoveCircle/>
+        link: '/delete',
+        library: <AiOutlineDelete/>
     }
 ]

@@ -74,13 +74,13 @@ const Book = () => {
     <>
       <div
         id="login"
-        className="container h-screen relative flex justify-center items-start"
+        className="container h-screen relative pt-[5em] flex justify-center items-start"
       >
         <div className="m-3" data-aos="zoom-in-up" data-aos-duration="1000">
           <div id="error-message"></div>
           <form onSubmit={makeBooking}>
             <p className="text-white text-2xl md:text-3xl text-center mb-3">
-              Rent Car
+              Book Car
             </p>
             <label htmlFor="user" className="text-white">
               Username
