@@ -10,7 +10,7 @@ const Carmenu = () => {
   const dispatch = useDispatch();
   const getCars = async () => {
     const response = await axios
-      .get(`http://127.0.0.1:3100/car_menu_items`)
+      .get(`https://hd-rent-app.fly.dev/car_menu_items`)
       .catch((err) => {
         console.log("err", err);
       });

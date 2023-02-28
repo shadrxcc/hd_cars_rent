@@ -21,7 +21,7 @@ const Login = () => {
       return errorMessage("enter username");
     } else {
       formData.append("username", username);
-      fetch("http://localhost:3100/tokens", {
+      fetch("https://hd-rent-app.fly.dev/tokens", {
         method: "POST",
         body: formData,
       })

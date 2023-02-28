@@ -44,7 +44,7 @@ const Addcars = () => {
     } else if (!image) {
       return errorMessage("Choose an image");
     }
-    fetch("http://localhost:3100/car_menu_items", {
+    fetch("https://hd-rent-app.fly.dev/car_menu_items", {
       method: "POST",
       body: formData,
     })

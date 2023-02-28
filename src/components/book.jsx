@@ -56,7 +56,7 @@ const Book = () => {
       formData.append("image", image);
       formData.append("price", price);
 
-      fetch("http://localhost:3100/bookings", {
+      fetch("https://hd-rent-app.fly.dev/bookings", {
         method: "POST",
         body: formData,
       })

@@ -4,7 +4,7 @@ import { AiFillLeftCircle, AiTwotoneCar } from "react-icons/ai";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import {RiLogoutCircleFill, RiLogoutCircleLine } from "react-icons/ri"
+import { RiLogoutCircleLine } from "react-icons/ri"
 
 const Desktopnav = () => {
   const [open, setOpen] = useState(false);

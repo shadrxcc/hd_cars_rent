@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const deleteReservation = id => {
     console.log('deleting....')
-    fetch(`http://localhost:3100/car_menu_items/${id}`, {
+    fetch(`https://hd-rent-app.fly.dev/car_menu_items/${id}`, {
       method: "DELETE",
     })
     .then((response) => {

@@ -16,7 +16,7 @@ const Cardetails = () => {
 
   const getSelectedcars = async () => {
     const response = await axios.get(
-      `http://localhost:3100/car_menu_items/${carId}`
+      `https://hd-rent-app.fly.dev/car_menu_items/${carId}`
     );
     dispatch(selectedCar(response.data));
   };
