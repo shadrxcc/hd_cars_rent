@@ -14,7 +14,7 @@ const [cars, setCars] = useState([])
 
 useEffect(() => {
     axios
-      .get("https://hd-rent-app.fly.dev/car_menu_items/")
+      .get("http://localhost:3100/car_menu_items/")
       .then((res) =>
         setCars(res.data)
       );
@@ -24,7 +24,7 @@ useEffect(() => {
 
   const deleteReservation = id => {
     console.log('deleting....')
-    fetch(`https://hd-rent-app.fly.dev/car_menu_items/${id}`, {
+    fetch(`http://localhost:3100/car_menu_items/${id}`, {
       method: "DELETE",
     })
     .then((response) => {

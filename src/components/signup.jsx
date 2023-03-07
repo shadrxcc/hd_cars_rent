@@ -21,7 +21,7 @@ const Signup = () => {
     } else {
       formData.append("username", username);
 
-      fetch("https://hd-rent-app.fly.dev/users", { method: "POST", body: formData })
+      fetch("http://localhost:3100/users", { method: "POST", body: formData })
         .then((res) => res.json())
         .then(navigate("/login"));
     }

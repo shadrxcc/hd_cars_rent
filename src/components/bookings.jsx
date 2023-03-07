@@ -10,7 +10,7 @@ const Bookings = () => {
 
   const deleteReservation = (id) => {
     console.log('deleting....')
-    fetch(`https://hd-rent-app.fly.dev/bookings/${id}`, {
+    fetch(`http://localhost:3100/bookings/${id}`, {
       method: "DELETE",
     })
     .then((response) => {

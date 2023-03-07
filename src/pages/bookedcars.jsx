@@ -11,7 +11,7 @@ const Bookedcars = () => {
 
   useEffect(() => {
     axios
-      .get("https://hd-rent-app.fly.dev/bookings")
+      .get("http://localhost:3100/bookings")
       .then((res) => dispatch(setReservation(res.data)))
       .catch((err) => console.log(err));
   }, []);
