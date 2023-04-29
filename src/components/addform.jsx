@@ -61,19 +61,22 @@ const Addcars = () => {
   const renderCondition = () => {
     if (loggedIn === "true") {
       return (
-        <div className="mt-5 ">
-          <h2 className="text-center text-2xl">Add car</h2>
-          <form onSubmit={postCar} className="flex mx-10 mt-3 md:m-32 flex-col">
+        <div className="container h-screen relative pt-[5em] flex justify-center items-start">
+          <div className="m-3 w-[100%]" data-aos="zoom-in-up" data-aos-duration="1000">
+          <form onSubmit={postCar} className="flex mt-3 mb-5 md:mx-36 flex-col">
+          <p className="text-white text-2xl md:text-3xl text-center mb-3">
+             Add Car
+            </p>
             <label className="text-white" htmlFor="car-name">
               Username
             </label>
             <input
               type="text"
-              className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
-              value={username}
               name="user"
-              id="user"
               disabled
+              value={username}
+              id="user"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
             />
 
             <label className="text-white" htmlFor="car-name">
@@ -82,7 +85,7 @@ const Addcars = () => {
             <input
               type="text"
               onChange={nameHandler}
-              className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               placeholder="Enter car name"
               name="car_name"
               id="car_name"
@@ -93,7 +96,7 @@ const Addcars = () => {
             <input
               type="text"
               onChange={priceHandler}
-              className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               placeholder="$5000"
               name="price"
               id="price"
@@ -106,7 +109,7 @@ const Addcars = () => {
               id="description"
               cols="20"
               onChange={descHandler}
-              className="bg-[#232323] text-white my-2 py-2 px-3 rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               rows="5"
               placeholder="Car Description"
             ></textarea>
@@ -116,7 +119,7 @@ const Addcars = () => {
             <input
               type="text"
               onChange={speedHandler}
-              className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               placeholder="200km/h"
               name="speed"
               id="speed"
@@ -127,7 +130,7 @@ const Addcars = () => {
             <input
               type="text"
               onChange={consumptionHandler}
-              className="bg-[#232323] my-2 text-white py-2 px-3 rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               placeholder="3.4l/km"
               name="consumption"
               id="consumption"
@@ -138,15 +141,15 @@ const Addcars = () => {
             <input
               type="file"
               onChange={imageHandler}
-              className="bg-[#232323] my-2 py-2 px-2 text-white rounded-lg"
+              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
               name="image_url"
               id="image_url"
             />
-            <button className="bg-red-700 rounded-lg text-white my-2 py-2">
+            <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
               Add Car
             </button>
           </form>
-        </div>
+        </div></div> 
       );
     } else {
       return (

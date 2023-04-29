@@ -48,8 +48,8 @@ const Bookings = () => {
         </div>
       </div>
     );
-    } else {
-      return
+    } else if (bookings.length === 0) {
+      return <div key={id}>No bookings</div>
     }
   });
 

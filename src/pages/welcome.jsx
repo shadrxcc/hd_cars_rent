@@ -21,8 +21,8 @@ const Welcome = () => {
       return (
         <div className="w-full flex items-center justify-center welcome h-full">
           <div className="text-white flex flex-col gap-y-4 pt-[10em] welcome-content text-center">
-            <p className="text-3xl">
-              Welcome <span className="text-red-500"> {username.username}</span>
+            <p className="text-3xl flex flex-col gap-2 items-center md:items-baseline justify-center md:flex-row">
+              Welcome <span className="text-red-500 font-bold text-[1.5em]"> {username.username}</span>
             </p>
             <Link to={`/cars`}>
               <button className="bg-red-700 rounded-lg p-3">

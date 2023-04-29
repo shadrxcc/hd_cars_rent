@@ -64,7 +64,7 @@ const Desktopnav = () => {
                   </li>
                 );
               })}
-              <span className="flex items-center pt-3" onClick={signOut}>
+              <span className="flex items-center hover:-translate-y-1 duration-300 pt-3" onClick={signOut}>
                 <span className="text-3xl hover:text-red-700 text-white ">
                   <RiLogoutCircleLine />
                 </span>

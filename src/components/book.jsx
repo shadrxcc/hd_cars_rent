@@ -56,7 +56,7 @@ const Book = () => {
       formData.append("image", image);
       formData.append("price", price);
 
-      fetch("https://hd-rent-app.fly.dev/bookings", {
+      fetch("http://localhost:3100/bookings", {
         method: "POST",
         body: formData,
       })
@@ -74,11 +74,11 @@ const Book = () => {
     <>
       <div
         id="login"
-        className="container h-screen relative pt-[5em] flex justify-center items-start"
+        className="container h-screen relative py-[5em] flex justify-center items-start"
       >
         <div className="m-3" data-aos="zoom-in-up" data-aos-duration="1000">
           <div id="error-message"></div>
-          <form onSubmit={makeBooking}>
+          <form onSubmit={makeBooking} className="mt-3 mb-5 md:mx-36">
             <p className="text-white text-2xl md:text-3xl text-center mb-3">
               Book Car
             </p>
@@ -159,7 +159,7 @@ const Book = () => {
               id="start_date"
             />
             <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
-              Rent car
+              Book car
             </button>
           </form>
         </div>

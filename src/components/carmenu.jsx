@@ -27,11 +27,11 @@ const Carmenu = () => {
     if (loggedIn === "true") {
       return (
         <>
-          <div className="pt-[8em] pl-[2em]">
+          <div className="py-[10em] px-[2em]">
             <div>
               <h2 className="text-white text-2xl">Featured Cars</h2>
             </div>
-            <div className="">
+            <div className="pt-5">
               <Carcomponent />
             </div>
           </div>

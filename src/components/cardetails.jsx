@@ -48,14 +48,14 @@ const Cardetails = () => {
           </div>
           <div>
             <p
-              className="text-white text-xl pb-3 text-center"
+              className="text-white text-[2em] font-bold pb-3 text-center"
               data-aos="zoom-out-up"
               data-aos-duration="1000"
             >
               {price}
             </p>
             <p
-              className="text-white px- pb-3 text-center"
+              className="text-white md:w-[658px] px-[2em] pb-3 text-center"
               data-aos="zoom-out-right"
               data-aos-duration="1000"
             >
