@@ -4,7 +4,7 @@ import { AiFillLeftCircle, AiTwotoneCar } from "react-icons/ai";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { RiLogoutCircleLine } from "react-icons/ri"
+import { RiLogoutCircleLine } from "react-icons/ri";
 
 const Desktopnav = () => {
   const [open, setOpen] = useState(false);
@@ -64,7 +64,10 @@ const Desktopnav = () => {
                   </li>
                 );
               })}
-              <span className="flex items-center hover:-translate-y-1 duration-300 pt-3" onClick={signOut}>
+              <span
+                className="flex items-center hover:-translate-y-1 duration-300 pt-3"
+                onClick={signOut}
+              >
                 <span className="text-3xl hover:text-red-700 text-white ">
                   <RiLogoutCircleLine />
                 </span>

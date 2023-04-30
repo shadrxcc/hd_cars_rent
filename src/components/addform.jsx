@@ -62,94 +62,102 @@ const Addcars = () => {
     if (loggedIn === "true") {
       return (
         <div className="container h-screen relative pt-[5em] flex justify-center items-start">
-          <div className="m-3 w-[100%]" data-aos="zoom-in-up" data-aos-duration="1000">
-          <form onSubmit={postCar} className="flex mt-3 mb-5 md:mx-36 flex-col">
-          <p className="text-white text-2xl md:text-3xl text-center mb-3">
-             Add Car
-            </p>
-            <label className="text-white" htmlFor="car-name">
-              Username
-            </label>
-            <input
-              type="text"
-              name="user"
-              disabled
-              value={username}
-              id="user"
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-            />
+          <div
+            className="m-3 w-[100%]"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+          >
+            <form
+              onSubmit={postCar}
+              className="flex mt-3 mb-5 md:mx-36 flex-col"
+            >
+              <p className="text-white text-2xl md:text-3xl text-center mb-3">
+                Add Car
+              </p>
+              <label className="text-white" htmlFor="car-name">
+                Username
+              </label>
+              <input
+                type="text"
+                name="user"
+                disabled
+                value={username}
+                id="user"
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+              />
 
-            <label className="text-white" htmlFor="car-name">
-              Car Name
-            </label>
-            <input
-              type="text"
-              onChange={nameHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              placeholder="Enter car name"
-              name="car_name"
-              id="car_name"
-            />
-            <label className="text-white" htmlFor="price">
-              Price
-            </label>
-            <input
-              type="text"
-              onChange={priceHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              placeholder="$5000"
-              name="price"
-              id="price"
-            />
-            <label className="text-white" htmlFor="Description">
-              Description
-            </label>
-            <textarea
-              name="car_description"
-              id="description"
-              cols="20"
-              onChange={descHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              rows="5"
-              placeholder="Car Description"
-            ></textarea>
-            <label className="text-white" htmlFor="speed">
-              Speed
-            </label>
-            <input
-              type="text"
-              onChange={speedHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              placeholder="200km/h"
-              name="speed"
-              id="speed"
-            />
-            <label className="text-white" htmlFor="consumption">
-              Consumption
-            </label>
-            <input
-              type="text"
-              onChange={consumptionHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              placeholder="3.4l/km"
-              name="consumption"
-              id="consumption"
-            />
-            <label className="text-white" htmlFor="car-image">
-              Car Image
-            </label>
-            <input
-              type="file"
-              onChange={imageHandler}
-              className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
-              name="image_url"
-              id="image_url"
-            />
-            <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
-              Add Car
-            </button>
-          </form>
-        </div></div> 
+              <label className="text-white" htmlFor="car-name">
+                Car Name
+              </label>
+              <input
+                type="text"
+                onChange={nameHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                placeholder="Enter car name"
+                name="car_name"
+                id="car_name"
+              />
+              <label className="text-white" htmlFor="price">
+                Price
+              </label>
+              <input
+                type="text"
+                onChange={priceHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                placeholder="$5000"
+                name="price"
+                id="price"
+              />
+              <label className="text-white" htmlFor="Description">
+                Description
+              </label>
+              <textarea
+                name="car_description"
+                id="description"
+                cols="20"
+                onChange={descHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                rows="5"
+                placeholder="Car Description"
+              ></textarea>
+              <label className="text-white" htmlFor="speed">
+                Speed
+              </label>
+              <input
+                type="text"
+                onChange={speedHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                placeholder="200km/h"
+                name="speed"
+                id="speed"
+              />
+              <label className="text-white" htmlFor="consumption">
+                Consumption
+              </label>
+              <input
+                type="text"
+                onChange={consumptionHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                placeholder="3.4l/km"
+                name="consumption"
+                id="consumption"
+              />
+              <label className="text-white" htmlFor="car-image">
+                Car Image
+              </label>
+              <input
+                type="file"
+                onChange={imageHandler}
+                className="text-white rounded-lg bg-[#232323] pl-3 py-2 my-2 w-full"
+                name="image_url"
+                id="image_url"
+              />
+              <button className="bg-red-700 rounded-lg text-white py-2 my-2 w-full">
+                Add Car
+              </button>
+            </form>
+          </div>
+        </div>
       );
     } else {
       return (

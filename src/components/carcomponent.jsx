@@ -8,17 +8,19 @@ const Carcomponent = () => {
   const renderList = cars.map((car) => {
     const { id, car_name, image_url, price } = car;
     return (
-      <Link key={id} to={`/details/${id}`}><div className="flex flex-col items-center">
-        <div className="">
-          <img src={image_url} className="w-full" alt="car" />
-        </div>
-        <div className="text-center">
-          <h2>{car_name}</h2>
+      <Link key={id} to={`/details/${id}`}>
+        <div className="flex flex-col items-center">
           <div className="">
-            <h2>{price}</h2>
+            <img src={image_url} className="w-full" alt="car" />
+          </div>
+          <div className="text-center">
+            <h2>{car_name}</h2>
+            <div className="">
+              <h2>{price}</h2>
+            </div>
           </div>
         </div>
-      </div></Link>
+      </Link>
     );
   });
 

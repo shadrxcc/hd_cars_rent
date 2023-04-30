@@ -1,19 +1,19 @@
-import React from 'react'
+import React from "react";
 
 export const cities = [
-    {
-        city: "Lagos"
-    },
+  {
+    city: "Lagos",
+  },
 
-    {
-        city: "Abuja"
-    },
+  {
+    city: "Abuja",
+  },
 
-    {
-        city: "Port-Harcout"
-    },
+  {
+    city: "Port-Harcout",
+  },
 
-    {
-        city: "Ibadan"
-    },
-]
+  {
+    city: "Ibadan",
+  },
+];

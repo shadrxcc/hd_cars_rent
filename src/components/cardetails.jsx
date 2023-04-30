@@ -7,7 +7,8 @@ import { selectedCar } from "../redux/actions/actions";
 
 const Cardetails = () => {
   const cars = useSelector((state) => state.selectedCarReducer);
-  const { car_name, car_description, image_url, price, consumption, speed } = cars;
+  const { car_name, car_description, image_url, price, consumption, speed } =
+    cars;
   window.localStorage.setItem("car", car_name);
   window.localStorage.setItem("carimage", image_url);
   window.localStorage.setItem("price", price);

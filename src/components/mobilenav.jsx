@@ -3,10 +3,9 @@ import { Pivot as Hamburger } from "hamburger-react";
 import { navbaritems } from "./navbaritems";
 import { Link, useNavigate } from "react-router-dom";
 
-
 const Mobilenav = () => {
   const [clicked, setClicked] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const buttonClick = () => {
     setClicked(!clicked);
@@ -64,7 +63,7 @@ const Mobilenav = () => {
       return null;
     }
   };
-  
+
   return <>{showNav()}</>;
 };
 

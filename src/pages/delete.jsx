@@ -35,8 +35,8 @@ const Deletecars = () => {
   };
 
   const navigate = () => {
-    window.location.href('/addcars')
-  }
+    window.location.href("/addcars");
+  };
 
   const renderCars = cars.map((car) => {
     const { car_name, image_url, id, user } = car;
