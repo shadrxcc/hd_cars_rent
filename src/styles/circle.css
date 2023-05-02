@@ -1,0 +1,66 @@
+.circle-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 160px);
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background: #d9d7da;
+  border-radius: 50%;
+}
+
+.mask,
+.fill-1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mask {
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.fill-1 {
+  clip: rect(0, 75px, 150px, 0);
+  background-color: #ec0c0c;
+}
+
+.full-1,
+.fill-1 {
+  animation: fill-1 ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+@keyframes fill-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(153deg);
+  }
+}
+
+.inside-circle {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: #202021;
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 13px;
+  z-index: 3;
+  color: #d9d7da;
+  text-align: center;
+}
+
+.spec-card {
+  width: 305px;
+  height: 250px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}

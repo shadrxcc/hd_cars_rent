@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# HDCARS
+> A car booking app where the company's list of cars available for booking are displayed. It allows authenticated users to able to see these cars, book a car of their choice and see the bookings they have made. It also allows users to add their own cars for listing as well as delete them.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app consumes a REST API created using the Ruby on Rails framework. API repo [hd_cars_rent_backend](https://github.com/shadrxcc/hd_cars_rent_backend)
 
-## Available Scripts
+## Live App
+[Vercel App](https://hd-cars-rent-git-dev-shadrxcc.vercel.app/)
 
-In the project directory, you can run:
+## Project Requirement/Features
+Core features - for teams of each size
+- A properly authenticated sign up and login using only a username. Users can not access any of the pages without authentication.
 
-### `npm start`
+- In the navigation panel: the user can see links to:
+    - Cars/Motorcycles/doctors/classes/items that you selected as a theme.
+    
+    - "My reservations".
+     
+    - "Add cars/motorcycle/doctor/class/item that you selected as a theme".
+    
+    -"Delete cars/motorcycle/doctor/class/item that you selected as a theme".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- On the main page, the user can see a list of cars/motorcycles/doctors/classes/items that you selected as a theme.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+- When the user selects a specific item, they can see the details page with its full description.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- On the details page, the user can click the "Reserve" button.
 
-### `npm run build`
+- When the user clicks the "Add item" link in the navigation panel they can see a form for adding a new item.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Make the app responsive, creating both mobile and desktop versions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- When the user clicks the "Delete item" link in the navigation panel they can see a list of all items with a title and "Delete" button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- When the user clicks the "Delete" button, the selected item is marked as removed and does not show on the main list anymore.
 
-### `npm run eject`
+- To make reservations, the user has to select a date and city (username and selected item are auto-filled).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- When the user clicks the "My reservations" link in the navigation panel they can see a list of their reservations (with information about item name, date and city).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Built with
+- ReactJs
+- Redux
+- Tailwind CSS
+- CSS
+- AOS
+### Setup
+## Frontend
+- Clone the GitHub Repository with 'git clone https://github.com/shadrxcc/hd_cars_rent.git'
+- Go to the Project Directory
+- Run ```npm install``` to install dependencies
+- Run ```npm start```. It runs the app in the development mode.<br>
+Open http://localhost:3000 to view it in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Backend
+- Go to the API repo [hd_cars_rent_backend](https://github.com/shadrxcc/hd_cars_rent_backend)
+- Clone the GitHub Repository with 'git clone https://github.com/shadrxcc/hd_cars_rent_backend.git'
+- Go to the Project Directory
+- Run ```bundle install``` to install dependencies
+- Setup database with:
+   ```
+   rails db:create
+   rails db:migrate
+   ```
+- Get seeded data with:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+rails db:seed
+```
+- If you are on Linux start the database service with:
 
-## Learn More
+```
+sudo service postgresql start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Run ```rails s -p 3100```. It runs the app in the development mode.<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open `http://localhost:3100/` in your browser.
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Shadrach Akaade**
 
-### Analyzing the Bundle Size
+- GitHub: [@shadrxcc](https://github.com/shadrxcc)
+- Twitter: [@shadrxcc](https://twitter.com/shadrxcc)
+- LinkedIn: [Shadrach Akaade](https://www.linkedin.com/in/shadrachakaade/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
 
-### Making a Progressive Web App
+Feel free to check the [issues page](https://github.com/shadrxcc/hd_cars_rent/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Show your support
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
